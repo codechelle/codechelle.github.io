@@ -21,6 +21,7 @@ li.nav a {
 
 li.nav a:hover {
 	background-color: #33ccff;
+    color: black;
 }
 
 main {
