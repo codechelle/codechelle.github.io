@@ -24,11 +24,6 @@ li.nav a:hover {
     color: black;
 }
 
-li.nav a:active {
-    background-color: #33ccff;
-    color: black;
-}
-
 body {
     background: url('max-bender-VmX3vmBecFE-unsplash.jpg');
     background-size: cover;
@@ -42,6 +37,10 @@ main {
 	margin: 10px;
 	padding: 25px;
 	background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+}
+
+a {
     color: white;
 }
 
