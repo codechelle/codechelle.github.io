@@ -25,10 +25,12 @@ li.nav a:hover {
 }
 
 body {
-    background: url('max-bender-VmX3vmBecFE-unsplash.jpg');
+    /* background: url('max-bender-VmX3vmBecFE-unsplash.jpg'); */
+	background-color: #E7E7C9;
     background-size: cover;
     background-position: center;
     color: white;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 main {
