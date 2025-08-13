@@ -30,14 +30,14 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
           run:
-            working-directory: ./codechelle
+            working-directory: /codechelle
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
         id: detect-package-manager
         run: |
-          if [ -f "${{ github.workspace }}/package.json" ]; then
+          if [ -f "${{ github.event.repository.name }}/package.json" ]; then
             echo "manager=npm" >> $GITHUB_OUTPUT
             echo "command=ci" >> $GITHUB_OUTPUT
             echo "runner=npx --no-install" >> $GITHUB_OUTPUT
