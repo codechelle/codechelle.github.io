@@ -50,7 +50,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}/codechelle
+          cache: ${{ steps.detect-package-manager.outputs.manager }}
+          cache-dependency-path: ".../codechelle/package-lock.json"
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
@@ -71,8 +72,10 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        working-directory: codechelle
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        working-directory: codechelle
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
