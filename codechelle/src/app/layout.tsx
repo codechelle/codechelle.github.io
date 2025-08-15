@@ -8,6 +8,8 @@ const openSans = Open_Sans({
   subsets: ["latin"],
 });
 
+const bodyClass = `${openSans.className} bg-[#011f33]`;
+
 export const metadata: Metadata = {
   title: "Nichelle Hayes",
   description: "The UI Engineer that solves problems.",
@@ -20,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={openSans.className}>
+      <body className={bodyClass}>
         <Nav />
         {children}
       </body>
