@@ -1,4 +1,4 @@
-import { IconDefinition, IconName, IconProp } from "@fortawesome/fontawesome-svg-core";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 type HeroNavItem = {
