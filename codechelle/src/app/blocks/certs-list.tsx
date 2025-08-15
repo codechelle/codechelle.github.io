@@ -15,7 +15,7 @@ const CertsList: FC<CertProps> = ({ certItems: props }): JSX.Element => {
                 key={index}
                 className={cert.inProgress ? inProgressStyle : completeStyle}
                 href={cert.url} target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faCertificate} className="w-[16px] h-[16px] mr-[6px]" />
+                    <FontAwesomeIcon icon={cert.icon ? cert.icon : faCertificate} className="w-[16px] h-[16px] mr-[6px]" />
                     {cert.certName} {cert.inProgress ? '(In Progress)' : ''}
                 </a>
             ))}

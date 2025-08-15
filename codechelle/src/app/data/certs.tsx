@@ -1,8 +1,12 @@
+import { faFreeCodeCamp, faHackerrank } from "@fortawesome/free-brands-svg-icons";
+import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
+
 type CertItem = {
     org: string;
     certName: string;
     url: string;
     inProgress?: boolean;
+    icon?: IconDefinition
 }
 
 interface CertProps {
@@ -13,12 +17,14 @@ const certItems: CertItem[]  = [
     {
         org: 'FreeCodeCamp', 
         certName: 'Responsive Web Design', 
-        url: 'https://www.freecodecamp.org/certification/codechelle/responsive-web-design'
+        url: 'https://www.freecodecamp.org/certification/codechelle/responsive-web-design',
+        icon: faFreeCodeCamp,
     },
     {
         org: 'HackerRank', 
         certName: 'CSS Certificate', 
-        url: 'https://www.hackerrank.com/certificates/a3d4c4479415'
+        url: 'https://www.hackerrank.com/certificates/a3d4c4479415',
+        icon: faHackerrank
     },
     {
         org: 'CodeSignal', 
