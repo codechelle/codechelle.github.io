@@ -3,7 +3,7 @@ import HeroNav from "./blocks/hero-nav";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <h1 className="text-5xl font-bold">Nichelle Hayes</h1>
         <p>A resource and self-motivated UI engineer with 6 years of experience crafting performant interfaces using React, TypeScript, and modern CSS frameworks. I have a track record of quickly mastering new skills, adapting to dynamic environments, and consistently exceeding performance targets. I am passionate about design systems, accessibility, and creating seamless user experiences through close collaboration with stakeholders, product, and design teams.</p>
