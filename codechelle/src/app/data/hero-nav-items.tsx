@@ -1,30 +1,33 @@
-type HeroNavItemType = {
+import { IconDefinition, IconName, IconProp } from "@fortawesome/fontawesome-svg-core";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
+type HeroNavItem = {
     name: string;
-    icon: string;
+    icon: IconDefinition;
     url: string;
 }
 
-interface HeroNavItemProps {
-    heroNavItem: HeroNavItemType,
+interface HeroNavProps {
+    heroNavItems: HeroNavItem[];
 }
 
-const heroNavItem = [
-    {
-        name: 'Certifications', 
-        icon: 'faCertificate', 
-        url: ''
-    },
+const heroNavItems: HeroNavItem[] = [
+    // {
+    //     name: 'Certifications', 
+    //     icon: 'faCertificate', 
+    //     url: ''
+    // },
     {
         name: 'LinkedIn', 
-        icon: 'faLinkedin', 
+        icon: faLinkedin, 
         url: 'https://linkedin.com/in/nichellehayes'
     },
     {
         name: 'Github', 
-        icon: 'faGithub', 
+        icon: faGithub, 
         url: 'https://github.com/codechelle'
     },
 ]
 
-export { heroNavItem };
-export type { HeroNavItemProps, HeroNavItemType };
+export { heroNavItems };
+export type { HeroNavProps };
