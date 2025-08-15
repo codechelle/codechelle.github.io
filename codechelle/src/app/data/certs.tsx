@@ -1,10 +1,15 @@
-interface CertItem {
+type CertItem = {
     org: string;
     certName: string;
     url: string;
+    inProgress?: boolean;
 }
 
-const certItems: CertItem[] = [
+interface CertProps {
+    certItems: CertItem[];
+}
+
+const certItems: CertItem[]  = [
     {
         org: 'FreeCodeCamp', 
         certName: 'Responsive Web Design', 
@@ -18,7 +23,16 @@ const certItems: CertItem[] = [
     {
         org: 'CodeSignal', 
         certName: 'General Programming & JavaScript', 
-        url: 'https://codesignal.com/learn/certificates/cmdl7859h0008l404feuw9oad/courses/59'
+        url: 'https://codesignal.com/learn/certificates/cmdl7859h0008l404feuw9oad/courses/59',
+    },
+    {
+        org: 'CodeSignal', 
+        certName: 'Full Stack Engineering with JavaScript', 
+        url: "#",
+        inProgress: true,
     },
 ]
+
+export { certItems };
+export type { CertProps };
 
