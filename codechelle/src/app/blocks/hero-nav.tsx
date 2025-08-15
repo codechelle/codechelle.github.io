@@ -1,8 +1,10 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 // import { faCertificate } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FC, JSX } from "react";
+import { HeroNavItemProps } from "../data/hero-nav-items";
 
-export default function HeroNav() {
+const HeroNav: FC<HeroNavItemProps> = ({ heroNavItem }): JSX.Element => {
     return (
         <div className="flex gap-4 items-center flex-col sm:flex-row">
             {/* <a
@@ -26,3 +28,5 @@ export default function HeroNav() {
         </div>
     );
 }
+
+export default HeroNav;
