@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import CertsList from "./blocks/certs-list";
-import HeroNav from "./blocks/hero-nav";
 import { faCodepen } from "@fortawesome/free-brands-svg-icons";
+import ButtonList from "./blocks/button-list";
+import { certItems } from "./data/certs";
+import { heroNavItems } from "./data/hero-nav-items";
 
 export default function Home() {
   return (
@@ -11,9 +12,9 @@ export default function Home() {
         <p>A resource and self-motivated UI engineer with 6 years of experience crafting performant interfaces using React, TypeScript, and modern CSS frameworks. I have a track record of quickly mastering new skills, adapting to dynamic environments, and consistently exceeding performance targets. I am passionate about design systems, accessibility, and creating seamless user experiences through close collaboration with stakeholders, product, and design teams.</p>
         <h2 className="text-3xl">"It's kinda boring here... What's next?"</h2>
         <p>Yeah, I know right? I've been heads down in work and learning more for the past five years that I abandoned this beautiful place. Don't worry! I am currently re-doing my portfolio site from scratch. My skills are far more advanced now than they were six years ago. I suppose a good place to start is revisiting my projects done here at <a className="underline" href="https://codepen.io/codechelle">Codepen <FontAwesomeIcon icon={faCodepen} className="w-[16px] h-[16px] inline ml-[1px]"/></a> and bring them over. Well, since you're here, check out the links below to learn more about me and connect!{/*<Link className="font-bold hover:underline" href="/changelog">Check out what's next for this hub!</Link>*/}</p>
-        <HeroNav heroNavItems={[]} />
+        <ButtonList buttons={heroNavItems} />
         <h2 className="text-2xl">Certifications</h2>
-        {<CertsList certItems={[]} /> }
+        {<ButtonList buttons={certItems} /> }
       </main>
     </div>
   );
